@@ -20,11 +20,6 @@ namespace CollegeManagementSystem.Repositories
 
         public List<Grade> GetGradesGrid()
         {
-            //var enrollments = _context.Enrollments.Include(e => e.Grades)
-            //    .ToList();
-            //var grades = _context.Grades.ToList();
-            //var list = grades.Join(enrollments, g => g.EnrollmentId, e => e.EnrollmentId,
-            //    (grade, enrollment) => grade).ToList();
             return _context.Grades.Include(g => g.Student).Include(g => g.Subject)
                 .ToList();
         }
