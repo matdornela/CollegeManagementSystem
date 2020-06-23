@@ -11,6 +11,7 @@
 {
     @Html.AntiForgeryToken()
     @Html.HiddenFor(model => model.StudentId)
+    @Html.HiddenFor(model => model.GradeId)
 
     <div class="form-horizontal">
         <h4>@action</h4>
